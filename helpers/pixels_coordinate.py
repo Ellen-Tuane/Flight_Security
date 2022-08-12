@@ -3,7 +3,7 @@ import cv2
 import pandas as pd
 
 data_path = '/home/ellentuane/Documents/IC/Flight Security/detections/contem_pessoas/1'
-output_path = '/home/ellentuane/Documents/IC/Flight Security/detections/contem_pessoas'
+output_path = '/detections/contem_pessoas'
 
 
 def click_event(event, x, y, flags, params):

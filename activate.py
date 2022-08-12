@@ -6,15 +6,14 @@ from absl.flags import FLAGS
 import cv2
 import numpy as np
 
-from helpers.frame import Frame
 from performance.bounding_boxes import BoundingBoxes
 from performance.confusion_matriz import ConfusionMatriz
 from performance.confusion_matriz_metrics import ConfusionMatrizMetrics
 from performance.yolo_predictions import YoloPredictions
 from helpers.net_size import change_net_size
-from coordinates.geo_coordinates import gsd, geo_to_meter, read_csv_proa_ref
-from coordinates.geo_coordinates import read_csv_geo_ref
-from coordinates.geo_coordinates import get_coordinates
+from helpers.geo_coordinates import gsd, geo_to_meter, read_csv_proa_ref
+from helpers.geo_coordinates import read_csv_geo_ref
+from helpers.geo_coordinates import get_coordinates
 from helpers.frame import Frame
 
 flags.DEFINE_string('cfg', './detections/cfg/yolov4-tiny_training_640.cfg', 'path to cfg file')
