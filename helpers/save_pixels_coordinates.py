@@ -2,8 +2,8 @@ import os
 import cv2
 import pandas as pd
 
-data_path = '/home/ellentuane/Documents/IC/Flight Security/detections/contem_pessoas/1'
-output_path = '/detections/contem_pessoas'
+data_path = '/home/ellentuane/Documents/IC/Flight Security/detections/frames/10'
+output_path = '/home/ellentuane/Documents/IC/Flight Security/detections/frames/'
 
 
 def click_event(event, x, y, flags, params):
@@ -12,47 +12,12 @@ def click_event(event, x, y, flags, params):
     global ix, iy
     # checking for left mouse clicks
     if event == cv2.EVENT_LBUTTONDOWN:
-        # displaying the coordinates
-        # on the Shell
-        #print(x, ' ', y)
-        #ix.append(x), iy.append(y)
         ix = x
         iy = y
-        #print('dentro da funcao', ix, iy)
-
-        # displaying the coordinates
-        # on the image window
-        #font = cv2.FONT_HERSHEY_SIMPLEX
-        #cv2.putText(frame, str(x) + ',' + str(y), (x, y), font, 1, (255, 0, 0), 2)
-        #cv2.imshow('image', frame)
-
-
 
 
 # driver function
 if __name__ == "__main__":
-    # reading the image
-    #frame = cv2.imread('100_0860_0026.JPG')
-    #height, width = frame.shape[:2]
-    #cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-    #cv2.resizeWindow('image', width, height)
-
-    # setting mouse handler for the image
-    # and calling the click_event() function
-    #cv2.setMouseCallback('image', click_event)
-    #print('fora da funcao', ix, iy)
-
-
-    #cv2.imshow('image', frame)
-    #k = cv2.waitKey(5000) & 0xFF
-    #print('fora da funcao2', ix, iy)
-
-    # wait for a key to be pressed to exit
-    #cv2.waitKey(0) nao descomentar
-
-    # close the window
-    #cv2.destroyAllWindows() nao descomentar
-
     i = 1
     geo_reference = []
 
@@ -78,4 +43,4 @@ if __name__ == "__main__":
 
             i += 1
     df = pd.DataFrame(geo_reference, columns=['image_name', "pixel_x", "pixel_y"])
-    df.to_csv(f"{output_path}/geo_reference_15m-undistorted1.csv", index=False)
+    df.to_csv(f"{output_path}/real_distance_10m.csv", index=False)

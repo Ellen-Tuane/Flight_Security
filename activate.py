@@ -18,9 +18,9 @@ from helpers.frame import Frame
 
 flags.DEFINE_string('cfg', './detections/cfg/yolov4-tiny_training_640.cfg', 'path to cfg file')
 flags.DEFINE_integer('size', 640, 'resize net to')
-flags.DEFINE_string('model', 'yolo_tiny_custom_1', 'tiny or yolov4')
+flags.DEFINE_string('model', 'yolo_tiny_custom_25', 'tiny or yolov4')
 flags.DEFINE_string('weights', './detections/weights/yolov4-tiny_training_640_best.weights', 'path to weights file')
-flags.DEFINE_string('data_path', './detections/frames/15_undistorted', 'path to frames or video')
+flags.DEFINE_string('data_path', './detections/frames/15', 'path to frames or video')
 flags.DEFINE_string('labeled_path', './detections/contem_pessoas/10m_yolo_annotations', 'path bbox labeled manually')
 flags.DEFINE_string('output', './detections/extracted_bbox', 'path to output bboxes')
 flags.DEFINE_string('classes', './detections/classes/person.names', 'path to classes name')
@@ -28,7 +28,7 @@ flags.DEFINE_string('data_type', 'frame', 'set video or frame')
 flags.DEFINE_float('sensor_width', 7.4, 'Camera sensor width')  # mm
 flags.DEFINE_float('sensor_height', 5.55, 'Camera sensor_height')  # mm
 flags.DEFINE_float('focal_length', 5.374, 'Camera focal_length')  # mm
-flags.DEFINE_float('camera_height', 20, 'Camera amera_height')  # mm
+flags.DEFINE_float('camera_height', 25, 'Camera amera_height')  # mm
 flags.DEFINE_boolean('save_data', False, 'save data into csv file')
 flags.DEFINE_boolean('save_frames', True, 'save frames')
 flags.DEFINE_boolean('confusion_matrix', False, 'evaluating detections results ')

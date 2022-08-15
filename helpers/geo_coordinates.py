@@ -155,5 +155,5 @@ delta_y = - delta_y
 
 lat_estim, long_estim = get_coordinates(delta_x, delta_y, proa, GSD, lat_ref, long_ref)
 
-print('esti = (', lat_estim, ',', long_estim, ')')
-print('real = (', lat_real, ',', long_real, ')')
+#print('esti = (', lat_estim, ',', long_estim, ')')
+#print('real = (', lat_real, ',', long_real, ')')
